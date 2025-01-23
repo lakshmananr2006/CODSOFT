@@ -1,1 +1,180 @@
+//Task 4 : E- commerce Website
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Demo</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+            color: #333;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            font-size: 1rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #007bff;
+        }
+
+        .search-bar {
+            margin: 1rem auto;
+            text-align: center;
+        }
+
+        .search-bar input {
+            padding: 0.5rem;
+            width: 50%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            padding: 2rem;
+        }
+
+        .product-card {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 1rem;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .product-card h3 {
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+        }
+
+        .product-card p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .product-card button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .product-card button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>E-Commerce Store</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="search-bar">
+        <input type="text" id="search" placeholder="Search for products..." oninput="filterProducts()">
+    </div>
+
+    <div class="product-grid" id="product-grid">
+        <div class="product-card" data-name="Laptop">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhtJp5Zc90x75MI0gbNM5DF3JXpEbLUo_zPA&s" alt="Laptop">
+            <h3>Laptop</h3>
+            <p>Under ₹200000</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card" data-name="Phone">
+            <img src= "https://media.licdn.com/dms/image/v2/D4D12AQG0NMBwOtr-IA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1712297539871?e=2147483647&v=beta&t=E-ccKcy0Sr4Nz5NqcEM0sW70Pc6w-tB1_PucQjjN3OM" alt="Phone">
+            <h3>Phone</h3>
+            <p>Under ₹50000</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card" data-name="Headphones">
+            <img src="https://static.independent.co.uk/2024/10/30/12/Wireless-headphones.jpg" alt="Headphones">
+            <h3>Headphones</h3>
+            <p>Under ₹5000</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card" data-name="Camera">
+            <img src="https://i.rtings.com/assets/pages/wLJxe8ki/best-cameras-for-beginners-medium.jpg?format=auto" alt="Camera">
+            <h3>Camera</h3>
+            <p>Under ₹100000</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+
+    <script>
+        function filterProducts() {
+            const searchInput = document.getElementById('search').value.toLowerCase();
+            const productCards = document.querySelectorAll('.product-card');
+
+            productCards.forEach(card => {
+                const productName = card.getAttribute('data-name').toLowerCase();
+                if (productName.includes(searchInput)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

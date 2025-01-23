@@ -1,1 +1,159 @@
+//Task 2 Email Template
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Email Template</title>
+    <style>
+        body {
+            font-family:  Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color:orchid;
+            background-color: #f4f4f4;
+        }
+        .email-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background-color: #0078d7;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            background-image: url('https://t3.ftcdn.net/jpg/07/09/88/28/360_F_709882809_u9NqZYoE23wToBxbIBPsgWiFofwAuSeu.jpg')
+        }
+        .navigation {
+            background-color: #f8f8f8;
+            padding: 10px;
+            text-align: center;
+        }
+        .navigation a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #0078d7;
+            font-size: 16px;
+        }
+        .navigation a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            padding: 20px;
+            color:#0c011f;
+            line-height: 2.6;
+            background-image: url('https://t3.ftcdn.net/jpg/02/24/64/56/360_F_224645618_dtpq1bEjnN67g3gampm39hg698AUC9tf.jpg')
+        }
+        .content h2 {
+            color: #0078d7;
+            margin-bottom: 10px;
+        }
+        .button {
+            display: inline-block;
+            background: #0078d7;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            margin: 10px 0;
+            text-align: center;
+        }
+        .button:hover {
+            background: #005bb5;
+        }
+        .feature-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+        .feature {
+            flex: 1 1 calc(50% - 20px);
+            background: #f9f9f9;
+            color:orange;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            text-align: center;
+            background-image: url('https://img.freepik.com/premium-vector/geometric-technological-background_63801-64.jpg?semt=ais_hybrid')
+        }
+        .feature h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .feature p {
+            font-size: 14px;
+            color: #666;
+        }
+        .footer {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 10px;
+            font-size: 12px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- Header -->
+        <div class="header">
+            EASY CART
+        </div>
+        
+        <!-- Navigation Bar -->
+        <div class="navigation">
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">Services</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <p> "Shop the latest trends at unbeatable prices! Click now for exclusive deals and doorstep delivery"</p>
+            <h2>Key Features:</h2>
+            <ul>
+                <li><strong>Ready Products:</strong> Newly Launched Product Available!!!</li>
+                <li><strong>Easy to use:</strong> Effortlessly customizable and navigable.</li>
+                <li><strong>Responsive:</strong> Works perfectly across all devices.</li>
+            </ul>
+
+            <!-- Feature Section -->
+            <div class="feature-section">
+                <div class="feature">
+                    <h3>NEW MOBILE COLLECTIONS</h3>
+                    <p>Choose from a variety of templates that suit your brand.</p>
+                    <a href="#" class="button">View Mobiles</a>
+                </div>
+                <div class="feature">
+                    <h3>NEW OUTFITS</h3>
+                    <p>Place Order And Enjoy</p>
+                    <a href="#" class="button">View Outfits</a>
+                </div>
+                <div class="feature">
+                    <h3>SIGN IN</h3>
+                    <p>Track your email performance with detailed insights.</p>
+                    <a href="#" class="button">Explore</a>
+                </div>
+                <div class="feature">
+                    <h3>SIGN UP NOW!!!</h3>
+                    <p>Seamlessly connect with your favorite tools.</p>
+                    <a href="#" class="button">Get Started</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            &copy; 2024 EASY CART. All Rights Reserved. | <a href="#" style="color: #0078d7;">Unsubscribe</a>
+        </div>
+    </div>
+</body>
+</html>
